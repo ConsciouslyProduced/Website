@@ -1,26 +1,544 @@
 /* Global */
 
 body {
-    font-family: 'Lato';
+    font-family: 'Barlow Semi Condensed';
 }
 
 /* Header */
 header {
-    margin: 0% 10%;
+    font-family: 'Barlow Semi Condensed';
+    display: flex;
+    flex-direction: row;
+    align-items: center;  
+    width: 100%;
 }
 
+
 .logo {
-    height: 150px;
+    height: 250px;
+    margin-left: 100px;
 }
 
 nav {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
     font-family: 'Cormorant';
-    margin-top: 1em;
-    margin-bottom: 3em;
-    font-size: 16pt;
+    font-size: 20pt;
+    width: 100%;
+}
+
+nav a {
+    margin: 0% 5% 0% 5%;
+    text-decoration: none;
+    color: #1e222d;
+}
+
+/* Footer */
+
+footer {
+    background-color: #1e222d;
+    color: #ffffff;
+    font-family: Barlow Semi Condensed;
+    font-size: 20pt;
+    padding-top: 20pt;
+    padding-bottom: 80px;
+    padding-left: 2%;
+}
+
+footer p{
+    margin-bottom: 0;
+}
+
+/* Index/Home */
+
+.light {
+    background-color: #fbf3e5
+}
+
+main {
+    font-family: Barlow Semi Condensed;
+    font-size: 22pt;
+    text-align: center;
+}
+
+.hero {
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Cormorant;
+}
+
+.hero img {
+    height: 25em;
+    margin-left: 70%;
+    margin-top: -40%;
+}
+
+.herotext {
+    margin: 5% 50% 0% 5%;
+    line-height: 2;
+    letter-spacing: 0.08em;
+}
+
+.hero div {
+    text-align: justify;
+}
+
+.subtitle {
+    font-family: Cormorant;
+    font-size: 50pt;
+    text-align: center;
+    height: 300px;
+    display: flex; 
+    align-items: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 5%;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.offerBlock {
+    -webkit-animation: bgcolor 100s infinite;
+    animation: bgcolor 50s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    margin-bottom: 100px;
+}
+
+@keyframes bgcolor {
+    0% {
+        background-color: #a1e4b1
+    }
+
+    30% {
+        background-color: #6b9976
+    }
+
+    60% {
+        background-color: #ffa658
+    }
+
+    90% {
+        background-color: #a1e4b1
+    }
+
+    100% {
+        background-color: #6b9976
+    }
+}
+
+.bold {
+    font-size: 30pt;
+    font-weight: 900;
+}
+
+.herotext div {
+    line-height: 1.5;
+}
+
+.subtitle2 {
+    height: 150px;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-bottom: 2%;
 }
 
 
+/* Container styles */
+.scrolling-text-container {
+    background-color: #fbf3e5;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+/* Inner container styles */
+.scrolling-text-inner {
+    display: flex;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 0;
+}
+
+/* Text styles */
+.scrolling-text {
+    display: flex;
+    font-family: cormorant;
+    font-size: 75pt;
+    margin-bottom: 100px;
+}
+
+.scrolling-text-item {
+    padding: 0 50px;
+}
+
+/* Apply the animation to the text items */
+.scrolling-text-inner>div {
+    animation: var(--direction) var(--marquee-speed) linear infinite;
+}
+
+/* Pause the animation when a user hovers over it */
+.scrolling-text-container:hover .scrolling-text-inner>div {
+    animation-play-state: paused;
+}
+
+/* Setting the Animation using Keyframes */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.subtitle3 {
+    margin-top: 100px;
+    font-size: 28pt;
+    margin-right: 12%;
+    margin-left: 12%;
+    padding-bottom: 100px;
+    text-align: justify;
+}
+
+.twocolumn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: #6b9976;
+    color: white;
+}
+
+.below {
+    padding-top: 200px;
+}
+
+.twocolumntitle {
+    font-family: Cormorant;
+    font-size: 40pt;
+    padding-bottom: 40px;
+    font-weight: 900;
+}
+
+.twocolumnsection {
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.left {
+    text-align: justify;
+    direction: rtl;
+}
+
+.right {
+    text-align: justify;
+}
+
+.photoColumn {
+    display: flex;
+    flex-direction: row;
+}
+
+.photoColumn img {
+    height: 800px;
+}
+
+/*CR*/
+
+.dark {
+    background-color: #646f8d;
+    color: #ffffff;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.dark a {
+    color: white;
+}
+
+.CRbodytext {
+    font-family: Cormorant;
+    font-size: 32pt;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-bottom: 20px;
+}
+
+.CRtitle {
+    font-family: Barlow Semi Condensed;
+    margin-top: 100px;
+    font-size: 40pt;
+    margin-bottom: 0;
+}
+
+.CRimage {
+    height: 200px;
+}
+
+.CRinfo {
+    margin-right: 30%;
+    margin-left: 30%;
+}
+
+.CRinfo p {
+    padding-top: 0px;
+}
+
+
+
+
+
+
+/*about*/
+
+.bioSection {
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    text-align: justify;
+    margin-right: 10%;
+}
+
+.bioSection img {
+    height: 425px;
+    margin-left: 20%;
+    margin-right: 5%;
+    margin-top: 50px;
+}
+
+.bioTitle {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    font-family: Cormorant;
+    font-size: 45pt;
+    font-weight: 900;
+}
+
+.bioRole {
+    font-family: Cormorant;
+    font-size: 28pt;
+    margin-top: 0;
+}
+
+.collaboratorTitle {
+    font-family: Cormorant;
+    font-size: 28pt;
+    margin-top: 100px;
+    font-weight: 900;
+}
+
+.collaboratorText {
+    margin-left: 30%;
+    margin-right: 30%;
+    font-size: 20pt;
+    margin-bottom: 100px;
+}
+
+.testimonialBlockleft img {
+    border-radius: 50%;
+    margin-left: 20%;
+}
+
+.testimonialBlockleft p {
+    margin-right: 15%;
+    margin-left: 5%;
+    text-align: justify;
+}
+
+.testimonialBlockleft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.testimonialBlockright {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.testimonialBlockright img {
+    border-radius: 50%;
+    margin-right: 20%;
+}
+
+.testimonialBlockright p {
+    margin-left: 15%;
+    margin-right: 5%;
+    text-align: justify;
+}
+
+/*Projects*/
+
+.DWRimage {
+    height: 500px;
+    margin-left: 20%;
+}
+
+.DWRproject {
+    display: flex;
+    flex-direction: row;
+    background-color: #fed602;
+    margin-bottom: 30px;
+}
+
+.DWRinfo {
+    margin-right: 20%;
+    padding-left: 8%;
+    background-color: #fed602;
+    color: black;
+    display: flex;
+    flex-direction: column;
+   text-align: left;
+}
+
+.DWRtitle {
+    font-family: Cormorant;
+    margin-bottom: 0;
+    font-weight: 900;
+    margin-top: 100px;
+    color: black;
+}
+
+.DWRpodcast {
+    font-family: Cormorant;
+    margin-top: 0;
+}
+
+.DWRabout {
+    font-size: 18pt;
+    text-align: justify;
+}
+
+.projectimage {
+    height: 500px;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .container {
+    position: relative;
+    width: 25%;
+    margin-left: 16%;
+    margin-bottom: 2%;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: justify;
+  }
+
+  .projectBlocks {
+    display: flex;
+    flex-direction: row;;
+  } 
+
+  /*Contact FAQ*/
+
+  .collapsible {
+    background-color: #ffa658;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 24pt;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color: #b26f35;
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .content {
+    padding: 0 18px;
+    background-color: #fbf3e5;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-size: 18pt;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  .faqtitle {
+    font-family: Cormorant;
+    font-size: 36pt;
+    font-weight: 900;
+  }
+
+  .calendlybutton {
+    background-color: #ffa658;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 100px;
+  }
+
+  .space {
+    margin-bottom: 100px;
+  }
