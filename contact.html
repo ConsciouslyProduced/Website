@@ -12,14 +12,17 @@
          <link rel="icon" type="" href="images/CPtoken_OG.png">
     </head>
 <body class="light">
-    <header>
-        <a class="logo" href="index.html"><img class="logo" src="images/CP_logo_OG_update.png" alt=""></a>
-        <nav>
-            <a href="about.html">about</a>
-            <a href="projects.html">projects</a>
-            <a href="consciouslyrested.html">consciously rested</a>
-            <a href="contact.html">contact</a>
-         </nav>
+  <header>
+    <div class="logobox">
+        <a class="logo" href="index.html">Consciously Produced</a>
+    </div>
+    <nav>
+        <a href="about.html">about</a>
+        <a href="projects.html">projects</a>
+        <a href="consciouslyrested.html">consciously rested</a>
+        <a href="contact.html">contact</a>
+     </nav>
+</header>
 </header>
     <main>
         <div class="getintouch">
@@ -34,7 +37,7 @@
                 <button type="button" class="calendlybutton">calendly</button>
             </a>
         </div>
-    <p class="faqtitle">frequently asked questions</p>
+    <p class="faqtitle">consciously produced faq</p>
 <button type="button" class="collapsible">What types of events do you specialize in producing?</button>
 <div class="content">
   <p>At Consciously Produced LLC, we specialize in a wide range of creative event productions, including conferences, dance and theater performances, podcasts, fundraisers, and more. Our expertise spans various industries and formats, allowing us to tailor our services to meet the unique needs of each client.</p>
@@ -51,11 +54,31 @@
 <div class="content">
   <p>Certainly! We have a diverse portfolio of past projects here. [LINK]</p>
 </div>
-<button type="button" class="collapsible">How can I get in touch with Consciously Produced LLC to discuss my project?</button>
-<div class="content">
-  <p>We'd love to hear from you! You can reach out to founder Ariane Michaud directly via email at [insert email address], or you can sign up for a call here https://calendly.com/ariane-lylr/letschat </p>
 </div>
    </div>
+
+   <p class="faqtitle">consciously rested faq</p>
+   <button type="button" class="collapsibledark">What services does Consciously Rested offer?</button>
+   <div class="content">
+     <p>Consciously Rested offers a range of wellness services including group and private yoga classes, meditation workshops, restorative movement sessions, individual sound healings, and customizable wellness retreats.</p>
+   </div>
+   <button type="button" class="collapsibledark"> Are your wellness services suitable for corporate and nonprofit clients?</button>
+   <div class="content">
+     <p>Yes, our wellness services are tailored specifically for corporate and nonprofit clients. We provide solutions that cater to organizational needs, including team-building activities, strategic planning workshops, and personalized wellness programs.</p>
+   </div>
+   <button type="button" class="collapsibledark">Can you host wellness sessions at our office?</button>
+   <div class="content">
+     <p>Absolutely! We can host half-day or full-day wellness sessions directly at your office, or bring specialized workshops to your workspace, providing convenient, on-site opportunities for team revitalization.</p>
+   </div>
+   <button type="button" class="collapsibledark">What are your specialized retreats like?</button>
+   <div class="content">
+     <p>Our specialized retreats are designed to address your organization’s unique needs, combining movement practices, mindfulness sessions, relaxation techniques, and of course, some work and strategic planning sessions. These retreats aim to enhance team bonding, personal growth, and overall well-being.</p>
+   </div>
+   <button type="button" class="collapsibledark">How can I get more information about your pricing?</button>
+   <div class="content">
+     <p>For detailed information on pricing and to discuss your specific needs, please reach out to us directly. We are happy to provide a customized quote based on the services you are interested in.</p>
+   </div>
+      </div>
    <script>
     var coll = document.getElementsByClassName("collapsible");
     var i;
@@ -72,7 +95,22 @@
       });
     }
     </script>
-
+<script>
+  var coll = document.getElementsByClassName("collapsibledark");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+  </script>
     <div>
 
     </div>
