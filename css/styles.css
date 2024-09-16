@@ -11,17 +11,26 @@ header {
     flex-direction: row;
     align-items: center;  
     width: 100%;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
+.logobox {
+    margin-left: 10em;
+    display: flex; 
+    flex-direction: row;
+    width: 100%;
+}
 
 .logo {
-    height: 250px;
-    margin-left: 100px;
+    font-size: 36px;
+    font-family: Cormorant;
+    text-decoration: none;
+    color: #1e222d;
 }
 
 nav {
     display: flex;
-    justify-content: flex-end;
     font-family: 'Cormorant';
     font-size: 20pt;
     width: 100%;
@@ -43,6 +52,7 @@ footer {
     padding-top: 20pt;
     padding-bottom: 80px;
     padding-left: 2%;
+    text-align: left;
 }
 
 footer p{
@@ -98,6 +108,7 @@ main {
     padding-top: 2%;
     padding-left: 2%;
     padding-right: 2%;
+    letter-spacing: 0.08em;
 }
 
 .offerBlock {
@@ -105,7 +116,7 @@ main {
     animation: bgcolor 50s infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 @keyframes bgcolor {
@@ -146,67 +157,31 @@ main {
     padding-bottom: 2%;
 }
 
-
-/* Container styles */
-.scrolling-text-container {
-    background-color: #fbf3e5;
-    border-radius: 4px;
+.container1 {
     overflow: hidden;
-    margin-top: 100px;
-    margin-bottom: 50px;
 }
 
-/* Inner container styles */
-.scrolling-text-inner {
-    display: flex;
-    white-space: nowrap;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 8px 0;
+.marquee-items {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 3em;
+  font-family: Cormorant;
+  font-size: 35px;
 }
 
-/* Text styles */
-.scrolling-text {
-    display: flex;
-    font-family: cormorant;
-    font-size: 75pt;
-    margin-bottom: 100px;
+.marquee {
+  display: flex;
+  width: 200%;
+  animation: marqueeSlide 20s linear infinite;
 }
 
-.scrolling-text-item {
-    padding: 0 50px;
+@keyframes marqueeSlide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
 }
 
-/* Apply the animation to the text items */
-.scrolling-text-inner>div {
-    animation: var(--direction) var(--marquee-speed) linear infinite;
-}
-
-/* Pause the animation when a user hovers over it */
-.scrolling-text-container:hover .scrolling-text-inner>div {
-    animation-play-state: paused;
-}
-
-/* Setting the Animation using Keyframes */
-@keyframes scroll-left {
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-@keyframes scroll-right {
-    0% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(0%);
-    }
-}
 
 .subtitle3 {
     margin-top: 100px;
@@ -217,15 +192,6 @@ main {
     text-align: justify;
 }
 
-.twocolumn {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    background-color: #6b9976;
-    color: white;
-}
 
 .below {
     padding-top: 200px;
@@ -234,22 +200,31 @@ main {
 .twocolumntitle {
     font-family: Cormorant;
     font-size: 40pt;
-    padding-bottom: 40px;
     font-weight: 900;
+    letter-spacing: 0.08em;
 }
 
-.twocolumnsection {
-    padding-left: 200px;
-    padding-right: 200px;
+.infoTextBox {
+    background-color:#6b9976;
+    color: white;
+    padding-top: 3em;
+    padding-bottom: 5em;
+}
+
+.infoTextColumn {
+    text-align: justify;
 }
 
 .left {
-    text-align: justify;
-    direction: rtl;
+    margin-left: 45%;
+    margin-right: 20%;
+    padding-top: 2em;
 }
 
 .right {
-    text-align: justify;
+    margin-left: 20%;
+    margin-right: 45%;
+    padding-top: 2em;
 }
 
 .photoColumn {
@@ -261,10 +236,11 @@ main {
     height: 800px;
 }
 
+
 /*CR*/
 
 .dark {
-    background-color: #646f8d;
+    background-color: #48605b;
     color: #ffffff;
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
@@ -287,14 +263,27 @@ main {
     color: white;
 }
 
+.yogaBody {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+
 .CRbodytext {
     font-family: Cormorant;
     font-size: 32pt;
-    margin-left: 30%;
-    margin-right: 30%;
-    padding-bottom: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-bottom: 5%;
+    z-index: 1;
 }
-
+.yogaBody img{
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    margin-right: 80%;
+}
 .CRtitle {
     font-family: Barlow Semi Condensed;
     margin-top: 100px;
@@ -313,6 +302,95 @@ main {
 
 .CRinfo p {
     padding-top: 0px;
+}
+
+.circleBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10em;
+}
+
+.circlecontainer {
+    position: relative;
+    width: 300px;
+    height: 150px; /* Height should be enough to fit the half-circle and circles */
+}
+
+.half-circle {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    width: 600px;
+    height: 300px;
+    background-color: #646f8d;
+    border-radius: 300px 300px 0 0;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.circles {
+    position: absolute;
+    bottom: -50px; /* Position the circles to be above the half-circle */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #646f8d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-size: 15pt;
+}
+
+.circle:hover {
+    width: 200px;
+    height: 200px;
+    background-color: #31302d;
+    z-index: 2;
+}
+
+.circle::after {
+    content: attr(data-text);
+    display: block;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 12px;
+}
+
+.circle:hover::after {
+    opacity: 1;
+}
+
+/* Position the circles in a half-circle arc */
+.circle:nth-child(1) { 
+    transform: rotate(calc(180deg * 6 / 4)) translateY(-400px) rotate(calc(-180deg * 6 / 4)); 
+}
+.circle:nth-child(2) { 
+    transform: rotate(calc(180deg * 7 / 4)) translateY(-400px) rotate(calc(-180deg * 7 / 4)); 
+}
+.circle:nth-child(3) { 
+    transform: rotate(calc(180deg * 8 / 4)) translateY(-400px) rotate(calc(-180deg * 8 / 4)); 
+}
+.circle:nth-child(4) { 
+    transform: rotate(calc(180deg * 9 / 4)) translateY(-400px) rotate(calc(-180deg * 9 / 4)); 
+}
+.circle:nth-child(5) { 
+    transform: rotate(calc(180deg * 10 / 4)) translateY(-400px) rotate(calc(-180deg * 10 / 4)); 
 }
 
 
@@ -402,42 +480,43 @@ main {
 
 /*Projects*/
 
-.DWRimage {
-    height: 500px;
-    margin-left: 20%;
+.mainimage {
+    height: 300px;
+    margin-left: 15%;
 }
 
-.DWRproject {
+.mainproject {
     display: flex;
     flex-direction: row;
-    background-color: #fed602;
+    background-color: #77A0B3;
     margin-bottom: 30px;
+    align-items: center;
 }
 
-.DWRinfo {
-    margin-right: 20%;
+.maininfo {
+    margin-right: 15%;
     padding-left: 8%;
-    background-color: #fed602;
-    color: black;
+    background-color: #77A0B3;
+    color: white;
     display: flex;
     flex-direction: column;
    text-align: left;
 }
 
-.DWRtitle {
+.maintitle {
     font-family: Cormorant;
     margin-bottom: 0;
     font-weight: 900;
-    margin-top: 100px;
-    color: black;
+    margin-top: 2em;
+    color: white;
 }
 
-.DWRpodcast {
+.mainsubtitle {
     font-family: Cormorant;
     margin-top: 0;
 }
 
-.DWRabout {
+.mainabout {
     font-size: 18pt;
     text-align: justify;
 }
@@ -471,6 +550,16 @@ main {
     transition: .5s ease;
     background-color: #008CBA;
   }
+
+  .project2 .overlay {
+    background-color: black;
+  }
+
+  .project2 img {
+    padding-top: 2em;
+  }
+
+
   
   .container:hover .overlay {
     opacity: 1;
@@ -506,10 +595,26 @@ main {
     outline: none;
     font-size: 24pt;
   }
+
+  .collapsibledark {
+    background-color: #6b9976;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 24pt;
+  }
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   .active, .collapsible:hover {
     background-color: #b26f35;
+  }
+
+  .active, .collapsibledark:hover {
+    background-color: #48605b;
   }
   
   /* Style the collapsible content. Note: hidden by default */
