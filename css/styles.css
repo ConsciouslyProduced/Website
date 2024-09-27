@@ -74,19 +74,18 @@ main {
 .hero {
     height: 800px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     font-family: Cormorant;
 }
 
 .hero img {
-    height: 25em;
-    margin-left: 70%;
-    margin-top: -40%;
+    height: 40em;
+    margin-top: -5em;
+    margin-bottom: 10em;
 }
 
 .herotext {
-    margin: 5% 50% 0% 5%;
+    margin: 10% 5% 0% 5%;
     line-height: 2;
     letter-spacing: 0.08em;
 }
@@ -106,6 +105,7 @@ main {
     margin-right: 25%;
     margin-top: 5%;
     padding-top: 2%;
+    padding-bottom: 2%;
     padding-left: 2%;
     padding-right: 2%;
     letter-spacing: 0.08em;
@@ -169,6 +169,14 @@ main {
   padding-bottom: 3em;
   font-family: Cormorant;
   font-size: 35px;
+  text-transform: uppercase;
+}
+
+.marquee-items p {
+    margin-right: 2em;
+    margin-left: 2em;
+    display: flex;
+    text-align: center;
 }
 
 .marquee {
@@ -240,11 +248,7 @@ main {
 /*CR*/
 
 .dark {
-    background-color: #48605b;
-    color: #ffffff;
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    background-color: #fbf3e5;
 }
 
 
@@ -259,31 +263,49 @@ main {
 
 }
 
-.dark a {
-    color: white;
-}
+
 
 .yogaBody {
     display: flex;
     flex-direction: column;
     align-items: left;
+    background-color: #fbf3e5;
+    background-image: url(../images/blank_gradient_circle_reef_sky_half.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-position: bottom;
 }
 
+.circlerow {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circlerow img{
+    padding-bottom: 2em;
+    height: 50em;
+}
+
+.yogablocks {
+    display: flex;
+    flex-direction: column;;
+    align-items: center;
+    margin-right: 2em;
+    margin-left: 2em;
+    font-size: 28px;
+}
 
 .CRbodytext {
     font-family: Cormorant;
-    font-size: 32pt;
+    font-size: 25pt;
     margin-left: 25%;
     margin-right: 25%;
-    padding-bottom: 5%;
+    padding-bottom: 2%;
     z-index: 1;
 }
-.yogaBody img{
-    z-index: -1;
-    position: absolute;
-    height: 100%;
-    margin-right: 80%;
-}
+
 .CRtitle {
     font-family: Barlow Semi Condensed;
     margin-top: 100px;
@@ -400,6 +422,13 @@ main {
 
 /*about*/
 
+.aboutbackground {
+   background-image: url("../images/blank_gradient_circle_reef_sunset_half.png");
+   background-repeat: no-repeat;
+   background-position: right;
+   background-size: contain;
+}
+
 .bioSection {
     display: flex;
     flex-direction: row;
@@ -409,10 +438,9 @@ main {
 }
 
 .bioSection img {
-    height: 425px;
+    height: 500px;
     margin-left: 20%;
     margin-right: 5%;
-    margin-top: 50px;
 }
 
 .bioTitle {
@@ -485,6 +513,15 @@ main {
     margin-left: 15%;
 }
 
+.projectbody {
+    background-image: url(../images/blank_gradient_circle_reef_sunset.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-position: top;
+}
+
+
 .mainproject {
     display: flex;
     flex-direction: row;
@@ -538,6 +575,11 @@ main {
     margin-bottom: 2%;
   }
 
+ .crciproject .overlay {
+    background-color: #35858a;
+
+ } 
+
   .overlay {
     position: absolute;
     top: 0;
@@ -583,6 +625,13 @@ main {
   } 
 
   /*Contact FAQ*/
+
+  .contactbackground {
+    background-image: url("../images/blank_gradient_circle_reef_sunset_half_left.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+ }
 
   .collapsible {
     background-color: #ffa658;
@@ -647,3 +696,83 @@ main {
   .space {
     margin-bottom: 100px;
   }
+
+  /*Media Queries*/
+
+  /*Mobile*/ 
+
+  @media (max-width: 450px) {
+    .hero img {
+    height: 25em;
+    margin-left: 0;
+    margin-top: 2%;
+}
+
+
+  }
+
+
+  /*MEDIA QUERIES*/
+
+  @media (max-width: 1800px) {
+    .hero img {
+        height: 25em;
+        margin-top: 0em;
+        margin-bottom: 10em;
+    }
+
+    .logobox {
+        margin-left: 10em;
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+    }
+
+    .subtitle {
+        font-family: Cormorant;
+        font-size: 40px;
+  }
+     .photoColumn img {
+         height: 500px;
+}
+    .subtitle3 {
+    margin-top: 0px;
+    }
+
+
+}
+
+
+
+@media (max-width: 1200px) {
+    .hero img {
+        height: 20em;
+        margin-top: 0em;
+        margin-bottom: 10em;
+    }
+
+    .logobox {
+        margin-left: 10em;
+        display: flex;
+        flex-direction: row;
+        width: 30%;
+    }
+    .herotext {
+        margin: 10% 5% 0% 5%;
+        line-height: 1.5;
+        letter-spacing: 0.08em;
+        font-size: 20pt;
+    }
+    .subtitle {
+        font-family: Cormorant;
+        font-size: 30px;
+  }
+     .photoColumn img {
+         height: 300px;
+}
+    .subtitle3 {
+    margin-top: 0px;
+    }
+
+
+}
